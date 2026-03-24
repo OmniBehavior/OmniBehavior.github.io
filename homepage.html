@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniBehavior: Towards Real-world Human Behavior Simulation</title>
+  <link rel="icon" href="./assets/kuaishou.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/static/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./assets/static/css/index.css">
+  <link rel="stylesheet" href="assets/static/css/image_display.css">
+
+  <!-- <link rel="stylesheet" href="./assets/static/css/leaderboard.css">
+  <link rel="stylesheet" href="./assets/static/css/video-player.css"> -->
+
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./assets/static/js/fontawesome.all.min.js"></script>
+  <script src="./assets/static/js/bulma-carousel.min.js"></script>
+  <script src="./assets/static/js/bulma-slider.min.js"></script>
+  <script src="./assets/static/js/explorer-index.js"></script>
+  <script src="./assets/static/js/question_card.js"></script>
+
+  <!-- <script src="./assets/static/js/leaderboard_testmini.js"></script>   -->
+  <!-- <script src="./data/results/output_folders.js" defer></script> -->
+  <!-- <script src="./data/results/model_scores.js" defer></script> -->
+
+  <!-- <script src="./visualizer/data/data_public.js" defer></script> -->
+
+  <style>
+    .no-sort {
+        cursor: default;
+        pointer-events: none;
+        background-image: none !important; /* Remove the sort arrow */
+    }
+  </style>
+
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container" style="max-width: 1200px;">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title is-bold">
+              <span class="OmniBehavior" style="vertical-align: middle;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">Towards Real-world Human Behavior Simulation:</span>
+              </h1>
+            <h2 class="subtitle is-3 publication-subtitle ", style="width: 100%;margin-bottom: 20px;margin-top:5px;">
+              <strong>Benchmarking Large Language Models on Long-horizon, Cross-scenario, Heterogeneous Behavior Traces</strong>
+            </h2>
+            <div class="is-size-5 publication-authors" style="width: 100%; margin: 15px auto;">
+              <span class="author-block">Jiawei Chen<sup style="color:#18acfb">1</sup><sup>,</sup><sup style="color:#ed4b82">2</sup><sup>,</sup><sup style="color:#9400D3">3</sup>,</span>
+              <span class="author-block">Ruoxi Xu<sup style="color:#18acfb">1</sup><sup>,</sup><sup style="color:#ed4b82">2</sup><sup>,</sup><sup style="color:#9400D3">3</sup>,</span>
+              <span class="author-block">Boxi Cao<sup style="color:#18acfb">1</sup>,</span>
+              <span class="author-block">Ruotong Pan<sup style="color:#9400D3">3</sup>,</span>
+              <span class="author-block">Yunfei Zhang<sup style="color:#9400D3">3</sup>,</span><br>
+              <span class="author-block">Yifei Hu<sup style="color:#9400D3">3</sup>,</span>
+              <span class="author-block">Yong Du<sup style="color:#9400D3">3</sup>,</span>
+              <span class="author-block">Tingting Gao<sup style="color:#9400D3">3</sup>,</span>
+              <!-- <span class="author-block">Han Li<sup style="color:#9400D3">3</sup>,</span> -->
+              <span class="author-block">Yaojie Lu<sup style="color:#18acfb">1</sup>,</span>
+              <span class="author-block">Yingfei Sun<sup style="color:#ed4b82">2</sup>,</span><br>
+              <span class="author-block">Xianpei Han<sup style="color:#18acfb">1</sup>,</span>
+              <span class="author-block">Le Sun<sup style="color:#18acfb">1</sup>,</span>
+              <span class="author-block">Xiangyu Wu<sup style="color:#9400D3">3</sup>,</span>
+              <span class="author-block">Hongyu Lin<sup style="color:#18acfb">1</sup></span>
+            </div>
+  
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup style="color:#18acfb">1</sup>ISCAS,</span>
+              <span class="author-block"><sup style="color:#ed4b82">2</sup>UCAS,</span>
+              <span class="author-block"><sup style="color:#9400D3">3</sup>Kuaishou Technology</span>
+            </div>
+
+   
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://github.com/OmniBehavior/OmniBehavior.github.io"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" onclick="alert('coming soon, stay tuned!'); return false;"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" onclick="alert('coming soon, stay tuned!'); return false;"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <p style="font-size:18px">🤗</p>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span> 
+                <!-- <span class="link-block">
+                  <a href="#leaderboard"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <p style="font-size:18px">🏆</p>
+                    </span>
+                    <span>Leaderboard</span>
+                  </a>
+                </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Introduction SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 mathvista_other">
+    <span class="mathvista_other" style="vertical-align: middle">Introduction</span>
+  </h1>
+  </div>
+</section>
+  <section class="section">
+
+  <div class="container">
+     
+    
+    <div class="container" style="margin-bottom: 2vh;">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            &nbsp;&nbsp;&nbsp;&nbsp;The holistic modeling of human behavior is central to a wide range of disciplines. While Large Language Models (LLMs) have raised the prospect of serving as general-purpose user-simulators, the empirical basis for assessing their capabilities remains systematically insufficient. Existing benchmarks suffer from critical limitations: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(1) They are confined to <strong>isolated scenarios</strong> with narrow action spaces (e.g., exclusively focusing on video browsing or e-commerce dialogue).<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(2) Such narrow focus overlooks the <strong>holistic, interconnected nature</strong> of authentic human decision-making and preferences.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(3) They fail to assess whether LLMs can transcend fragmented data to model <strong>long-horizon causal structures</strong>.  <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;To bridge this gap, we present <strong>OmniBehavior, the first user simulation benchmark</strong> built entirely on real-world data that simultaneously captures long-horizon, cross-scenario, and heterogeneous behavioral patterns. Collected from <a href="https://www.kuaishou.com" target="_blank">Kuaishou</a>, OmniBehavior aggregates complete interaction traces from representative users over a three-month period across 5 diverse scenarios.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Comprehensive evaluation of current state-of-the-art closed and open-source LLMs reveals substantial limitations. For instance, the best-performing LLM (Claude-4.5-Opus) achieves an overall score of only 44.55, and F1 scores on binary behavior prediction for most models do not exceed 40%. This proves that current LLMs struggle to accurately simulate complex, long-horizon user behavior traces. <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Crucially, our study uncovers a fundamental structural bias in current LLM simulators: <strong>they converge toward a "positivity-and-average" representation</strong>. <strong>This Utopian bias and hyper-activity blur individual-specific differences</strong>, discarding long-tail behaviors and negative feedback signals. OmniBehavior provides a vital framework to guide the genuine modeling of real human diversity. <br>
+            
+          </div>
+        </div>
+      </div>
+  </div>
+   
+
+  <div class="container">
+    <div class="content has-text-centered">
+      <div class="box m-5" >
+        <div class="content has-text-centered">
+          <img src="assets/OmniBehavior.jpg" alt="data-composition" style="max-width: 75%;"/>
+          <p style="text-align: left; margin-left: auto; margin-top:1%;margin-right: auto; width: 80%;" >
+            Overview of <strong>OmniBehavior</strong>, a real-world comprehensive benchmark for evaluating LLM-based user simulators. The benchmark is constructed in three stages:<br> &nbsp;&nbsp;&nbsp;&nbsp;<strong>(1) Data Collection</strong>: aggregation of real-world logs from Kuaishou platform across five major scenarios. <br> &nbsp;&nbsp;&nbsp;&nbsp;<strong>(2) Data Processing</strong>: multi-modal fusion, two-level cleaning, representative sampling, and anonymization. <br> &nbsp;&nbsp;&nbsp;&nbsp;<strong>(3) Benchmark Construction</strong>: the resulting dataset captures long-horizon, cross-scenario behavior traces, providing as a high-fidelity testbed for evaluating LLM-based user simulators in real-world industrial settings.<br/>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  </section>
+
+<!-- DATASET SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 mathvista_other">
+    <span class="mathvista_other" style="vertical-align: middle">OmniBehavior Benchmark</span>
+  </h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+        
+
+    <div class="columns is-centered">
+      <div class="container">
+        <div class="content has-text-centered">
+          <h2 class="title is-3">Benchmark Scope</h2>
+          <p style="text-align: center; margin-left: auto; margin-top:1%;margin-right: auto; width: 80%;" >
+            We construct a unified simulation environment covering five major user activities on Kuaishou platform (including customer service dialogues within the E-commerce scenario). The framework requires the agent to predict diverse behaviors (e.g., watch duration, purchase, comment) based on scenario-specific contexts, serving as a comprehensive testbed for high-fidelity user simulation.
+          </p>
+          <div class="box m-5" >
+            <div class="content has-text-centered ">
+              <img src="assets/detail_context_action.jpg" alt="data-composition" style="max-width: 60%;"/>
+              <p style="text-align: center; margin-left: auto; margin-top:1%;margin-right: auto; width: 80%;" >
+                <!-- <strong>The OmniBehavior Benchmark Scope.</strong> -->
+
+                <br/>
+              </p>
+            </div>
+          </div>
+
+          <h2 class="title is-3">Single-scenario vs. Multi-scenario Profiles</h2>
+
+          <div class="box m-5" >
+            <div class="content has-text-centered ">
+              <p style="text-align: left; margin-left: auto; margin-top:1%;margin-right: auto; width: 80%;" >
+            User profile reconstruction based on Single-scenario vs. Multi-scenario data. To assess whether single-scenario data is sufficient to model user preferences, we compare single-scenario and multi-scenario settings through qualitative profile reconstruction. Using Claude-3.5-Sonnet to extract interests from interaction histories, we build user word clouds and summaries. As illustrated, profiles derived from single-scenario data are often fragmented and biased. In contrast, multi-scenario data provides richer contextual signals that better capture a user's stable and essential characteristics.</p>
+              <img src="assets/multi_domain_a.jpg" alt="User profile reconstruction" style="max-width: 55%;"/>
+                <br/>
+            </div>
+          </div>
+
+          <h2 class="title is-3">Cross-scenario Causal Chain Analysis</h2>
+
+          <div class="box m-5" >
+            <div class="content has-text-centered ">
+              <p style="text-align: left; margin-left: auto; margin-top:1%;margin-right: auto; width: 80%;" >
+            We present a representative case study of a 12-day causal chain leading to a purchase event. After an initial search for "Xiaomi Launch Event", the user interacts with related items across various scenarios, eventually adding the item to the cart during a live stream and completing the order. This confirms that decisions stem from long-term, cross-scenario accumulation. Benchmarks limited to short sessions or single scenarios cause a form of "causal amputation," underscoring that ultra-long sequences and multi-scenario environments are necessary to preserve causal integrity.</p>
+              <img src="assets/xiaomi_causal_chain_analysis.jpg" alt="Cross-scenario causal chain case study" style="max-width: 75%;"/>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  </div>
+</div>
+
+</section>
+<!-- EXPERIMENTAL RESULTS SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 mathvista_other">
+    <span class="mathvista_other" style="vertical-align: middle">Experimental Results</span>
+  </h1>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="leaderboard" style="margin-top: -5%;"></h2>
+        <div class="content has-text-centered" style="margin-left: auto; margin-right: auto; width: 80%;">
+          <p style="text-align: justify; margin-bottom: 20px;"><br>
+            Comprehensive comparison of LLM backbones on the OmniBehavior Benchmark. We categorize user behaviors into three types: binary behaviors (e.g., clicks), continuous behaviors (e.g., duration), and textual behaviors (e.g., dialogue). The overall score represents the aggregated performance. The best/second best scores are <strong>bolded</strong>/<u>underlined</u>.
+          </p>
+          <table class="js-sort-table table" id="results" style="margin-left: auto; margin-right: auto; width: 90%;">
+            <thead>
+              <tr>
+                <th rowspan="2" class="no-sort" style="vertical-align: middle; width: 150px;"><strong>Model</strong></th>
+                <th colspan="2" style="vertical-align: middle;"><strong>Video</strong></th>
+                <th style="vertical-align: middle;"><strong>Live</strong></th>
+                <th style="vertical-align: middle;"><strong>Ads</strong></th>
+                <th colspan="2" style="vertical-align: middle;"><strong>E-commerce</strong></th>
+                <th rowspan="2" style="vertical-align: middle;"><strong>Overall Score</strong></th>
+              </tr>
+              <tr>
+                <th style="vertical-align: middle;"><strong>Binary</strong></th>
+                <th style="vertical-align: middle;"><strong>Continuous</strong></th>
+                <th style="vertical-align: middle;"><strong>Binary</strong></th>
+                <th style="vertical-align: middle;"><strong>Binary</strong></th>
+                <th style="vertical-align: middle;"><strong>Binary</strong></th>
+                <th style="vertical-align: middle;"><strong>Textual</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="8" style="background-color: #f0f0f0; text-align: left;"><em><u>Closed-source</u></em></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;">Claude-Opus-4.5</td>
+                <td style="vertical-align: middle;"><strong>33.05</strong></td>
+                <td style="vertical-align: middle;">64.19</td>
+                <td style="vertical-align: middle;"><strong>31.70</strong></td>
+                <td style="vertical-align: middle;"><strong>51.16</strong></td>
+                <td style="vertical-align: middle;">29.98</td>
+                <td style="vertical-align: middle;"><strong>57.21</strong></td>
+                <td style="vertical-align: middle;"><strong>44.55</strong></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;">Claude-Sonnet-4.5</td>
+                <td style="vertical-align: middle;">18.85</td>
+                <td style="vertical-align: middle;"><strong>65.95</strong></td>
+                <td style="vertical-align: middle;">25.00</td>
+                <td style="vertical-align: middle;"><u>42.77</u></td>
+                <td style="vertical-align: middle;"><strong>36.13</strong></td>
+                <td style="vertical-align: middle;">54.26</td>
+                <td style="vertical-align: middle;">40.49</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;">Claude-Haiku-4.5</td>
+                <td style="vertical-align: middle;">22.84</td>
+                <td style="vertical-align: middle;">63.26</td>
+                <td style="vertical-align: middle;">26.11</td>
+                <td style="vertical-align: middle;">30.00</td>
+                <td style="vertical-align: middle;">26.37</td>
+                <td style="vertical-align: middle;">50.29</td>
+                <td style="vertical-align: middle;">36.48</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;">Claude-Sonnet-4</td>
+                <td style="vertical-align: middle;">25.29</td>
+                <td style="vertical-align: middle;">64.62</td>
+                <td style="vertical-align: middle;">28.86</td>
+                <td style="vertical-align: middle;">36.81</td>
+                <td style="vertical-align: middle;">16.50</td>
+                <td style="vertical-align: middle;">49.13</td>
+                <td style="vertical-align: middle;">36.87</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;">Gemini-3-Flash</td>
+                <td style="vertical-align: middle;">22.09</td>
+                <td style="vertical-align: middle;">53.79</td>
+                <td style="vertical-align: middle;">25.61</td>
+                <td style="vertical-align: middle;">24.64</td>
+                <td style="vertical-align: middle;">19.65</td>
+                <td style="vertical-align: middle;">49.80</td>
+                <td style="vertical-align: middle;">32.60</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;">GPT-5.2</td>
+                <td style="vertical-align: middle;"><u>31.54</u></td>
+                <td style="vertical-align: middle;"><u>65.01</u></td>
+                <td style="vertical-align: middle;">28.63</td>
+                <td style="vertical-align: middle;">33.60</td>
+                <td style="vertical-align: middle;">29.32</td>
+                <td style="vertical-align: middle;">46.29</td>
+                <td style="vertical-align: middle;">39.07</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;">GPT-4o</td>
+                <td style="vertical-align: middle;">27.88</td>
+                <td style="vertical-align: middle;">62.75</td>
+                <td style="vertical-align: middle;">28.15</td>
+                <td style="vertical-align: middle;">25.24</td>
+                <td style="vertical-align: middle;">28.66</td>
+                <td style="vertical-align: middle;">44.92</td>
+                <td style="vertical-align: middle;">36.27</td>
+              </tr>
+              <tr>
+                <td colspan="8" style="background-color: #f0f0f0; text-align: left;"><em><u>Open-source</u></em></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;">GLM-4.7</td>
+                <td style="vertical-align: middle;">26.86</td>
+                <td style="vertical-align: middle;">64.43</td>
+                <td style="vertical-align: middle;"><u>28.97</u></td>
+                <td style="vertical-align: middle;">40.34</td>
+                <td style="vertical-align: middle;">32.90</td>
+                <td style="vertical-align: middle;"><u>55.25</u></td>
+                <td style="vertical-align: middle;"><u>41.46</u></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;">DeepSeek-V3</td>
+                <td style="vertical-align: middle;">21.42</td>
+                <td style="vertical-align: middle;">63.98</td>
+                <td style="vertical-align: middle;">27.92</td>
+                <td style="vertical-align: middle;">25.74</td>
+                <td style="vertical-align: middle;"><u>33.31</u></td>
+                <td style="vertical-align: middle;">52.13</td>
+                <td style="vertical-align: middle;">37.42</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;">Kimi-K2-Instruct</td>
+                <td style="vertical-align: middle;">23.30</td>
+                <td style="vertical-align: middle;">64.80</td>
+                <td style="vertical-align: middle;">28.60</td>
+                <td style="vertical-align: middle;">31.19</td>
+                <td style="vertical-align: middle;">29.94</td>
+                <td style="vertical-align: middle;">47.83</td>
+                <td style="vertical-align: middle;">37.61</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;">Qwen3-235B</td>
+                <td style="vertical-align: middle;">18.26</td>
+                <td style="vertical-align: middle;">62.38</td>
+                <td style="vertical-align: middle;">23.84</td>
+                <td style="vertical-align: middle;">23.19</td>
+                <td style="vertical-align: middle;">19.22</td>
+                <td style="vertical-align: middle;">45.74</td>
+                <td style="vertical-align: middle;">32.11</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 mathvista_other">
+    <span class="mathvista_other" style="vertical-align: middle">The Structural Bias of LLM Simulator</span>
+  </h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="leaderboard" style="margin-top: -5%;"></h2>
+        <div class="box m-5">
+          <div id="results-carousel" class="carousel results-carousel">  
+            <!-- Slide 1 -->
+            <div class="content has-text-centered image-wrapper" style="padding: 10px;">
+              <h3 class="title is-4">Hyper-activity Bias</h3>
+              <div class="has-text-justified" style="margin-bottom: 20px;">
+                <p>We first compare real and simulated user behaviors at the distribution level by measuring the positive prediction rate, defined as the proportion of positive outcomes among all interactions.</p>
+                <p>We observe a pronounced structural discrepancy. Real human behavior is inherently sparse, with positive interaction rates remaining below 10%. By contrast, all evaluated LLM-based simulators exhibit a hyper-activity bias. Models such as Qwen3-235B and Gemini-3-Flash overestimate user actions by 40&ndash;60%. As a result, these simulators fail to capture implicit rejection behaviors, making them unsuitable for real-world governance applications such as user churn warning.</p>
+              </div>
+              <img src="assets/positive_count_bar_by_scene.jpg" alt="Hyper-activity Bias" style="max-width: 60%; margin: 15px auto; display: block;"/>
+              <p style="text-align: justify; margin-top: 10px;"><em>Comparison of positive interaction rates between real users and LLM-based simulators across scenarios. LLM-generated behaviors show substantially higher positive rates, revealing a systematic hyper-activity bias.</em></p>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="content has-text-centered image-wrapper" style="padding: 10px;">
+              <h3 class="title is-4">Utopian Tendency Analysis: Emotional Expression</h3>
+              <div class="has-text-justified" style="margin-bottom: 20px;">
+                <p>Figure 2 shows a clear divergence: real users frequently express strong negative emotions in E-commerce scenario, whereas LLM-generated utterances concentrate around neutral and positive sentiment. Rather than lack of understanding, this behavior suggests LLM-based simulators systematically suppress negative emotional expression, even in adverse contexts, due to alignment mechanisms favor polite and conflict-avoiding outputs.</p>
+              </div>
+              <img src="assets/sentiment_kde_customer_service_dialogue_new.jpg" alt="Sentiment Distribution" style="max-width: 60%; margin: 15px auto; display: block;"/>
+              <p style="text-align: justify; margin-top: 10px;"><em>Sentiment distribution of real users and LLM-simulated users in E-commerce customer service dialogues. We find that LLM-generated utterances concentrate around neutral and positive sentiment, while real users exhibit a wider spread with substantial negative expressions.</em></p>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="content has-text-centered image-wrapper" style="padding: 10px;">
+              <h3 class="title is-4">Utopian Tendency Analysis: Language Style</h3>
+              <div class="has-text-justified" style="margin-bottom: 20px;">
+                <p>As shown in Figure 3, LLM-generated utterances consistently exhibit higher levels across these dimensions compared to real users. In contrast, real user language is more direct, emotionally expressive, and often confrontational in service failure scenarios. These results suggest that LLM-based simulators default to overly polite and controlled communication patterns, failing to capture the diversity and intensity of real-world user expressions. Taken together, these findings reveal a systemic bias toward positivity and politeness in LLM-simulated behaviors, producing an artificially sanitized environment that is ill-suited for modeling crisis management, malicious attacks, or adversarial social dynamics.</p>
+              </div>
+              <img src="assets/language_style_heatmap_customer_service_dialogue.jpg" alt="Language Style" style="max-width: 60%; margin: 15px auto; display: block;"/>
+              <p style="text-align: justify; margin-top: 10px;"><em>Language style comparison between real users and LLM-simulated users. LLM-generated utterances exhibit higher levels of politeness markers, hedging, and face-saving strategies, indicating a systematic tendency towards overly polite and non-confrontational language.</em></p>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="content has-text-centered image-wrapper" style="padding: 10px;">
+              <h3 class="title is-4">Personality Homogenization</h3>
+              <div class="has-text-justified" style="margin-bottom: 20px;">
+                <p>As shown in Figure 4, real users exhibit substantially larger inter-user variation than intra-user variation (Inter &raquo; Intra, Ratio &approx; 0.29). In contrast, LLM-generated users display heavily overlapping intra- and inter-user distributions (Ratio &approx; 0.7-0.87), suggesting that models struggle to maintain distinct user identities over long-horizon interactions. This homogenization may be attributed to the dominance of high-frequency generic behavior patterns during pre-training, which suppress long-tail personalized signals and reduce behavioral diversity.</p>
+              </div>
+              <img src="assets/intra_inter_multi_model_comparison_all.jpg" alt="Personality Homogenization" style="max-width: 65%; margin: 15px auto; display: block;"/>
+              <p style="text-align: justify; margin-top: 10px;"><em>Comparison of Intra-user and Inter-user behavioral distances for Human and LLM-simulated users. Real users exhibit significantly larger inter-user variation than intra-user variation, whereas LLM-generated users show heavily overlapping distributions, indicating a pronounced tendency toward persona homogenization.</em></p>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <!-- <div class="container"> -->
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align: center;">
+            This website is adapted from <a href="https://video-mme.github.io/">Video-MME</a> and <a href="https://kuaimod.github.io/">KuaiMod</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</footer>
+
+</body>
+</html>
+
