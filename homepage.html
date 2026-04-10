@@ -49,15 +49,15 @@
       <div class="container" style="max-width: 1200px;">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title is-bold">
-              <span class="OmniBehavior" style="vertical-align: middle;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">Towards Real-world Human Behavior Simulation:</span>
-              </h1>
-            <h2 class="subtitle is-3 publication-subtitle ", style="width: 100%;margin-bottom: 20px;margin-top:5px;">
+            <h1 class="title is-2 publication-title is-bold">
+              <span class="OmniBehavior" style="vertical-align: middle;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">OmniBehavior: Towards Real-world Human Behavior Simulation</span>
+            </h1>
+            <h2 class="subtitle is-4 publication-subtitle ", style="width: 100%;margin-bottom: 20px;margin-top:5px;">
               <strong>Benchmarking Large Language Models on Long-horizon, Cross-scenario, Heterogeneous Behavior Traces</strong>
             </h2>
             <div class="is-size-5 publication-authors" style="width: 100%; margin: 15px auto;">
-              <span class="author-block">Jiawei Chen<sup style="color:#18acfb">1</sup><sup>,</sup><sup style="color:#ed4b82">2</sup><sup>,</sup><sup style="color:#9400D3">3</sup>,</span>
-              <span class="author-block">Ruoxi Xu<sup style="color:#18acfb">1</sup><sup>,</sup><sup style="color:#ed4b82">2</sup><sup>,</sup><sup style="color:#9400D3">3</sup>,</span>
+              <span class="author-block">Jiawei Chen<sup style="color:#18acfb">1</sup><sup>,</sup><sup style="color:#ed4b82">2</sup></span>
+              <span class="author-block">Ruoxi Xu<sup style="color:#18acfb">1</sup><sup>,</sup><sup style="color:#ed4b82">2</sup></span>
               <span class="author-block">Boxi Cao<sup style="color:#18acfb">1</sup>,</span>
               <span class="author-block">Ruotong Pan<sup style="color:#9400D3">3</sup>,</span>
               <span class="author-block">Yunfei Zhang<sup style="color:#9400D3">3</sup>,</span><br>
@@ -83,17 +83,27 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://github.com/OmniBehavior/OmniBehavior.github.io"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                        <i class="fab fa-github"></i>
+                  <a href="https://github.com/icip-cas/OmniBehavior"
+                    class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38
+                        0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+                        -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
+                        .07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
+                        -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04
+                        2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87
+                        3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38
+                        A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+                      </svg>
                     </span>
                     <span>Code</span>
-                    </a>
+                  </a>
                 </span>
                 <span class="link-block">
-                  <a href="#" onclick="alert('coming soon, stay tuned!'); return false;"
-                     class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2604.08362" 
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank">
                     <span class="icon">
                         <i class="ai ai-arxiv"></i>
                     </span>
@@ -101,7 +111,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="#" onclick="alert('coming soon, stay tuned!'); return false;"
+                  <a href="https://github.com/icip-cas/OmniBehavior/tree/main/data"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <p style="font-size:18px">🤗</p>
@@ -146,7 +156,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;The holistic modeling of human behavior is central to a wide range of disciplines. While Large Language Models (LLMs) have raised the prospect of serving as general-purpose user-simulators, the empirical basis for assessing their capabilities remains systematically insufficient. Existing benchmarks suffer from critical limitations: <br>
             &nbsp;&nbsp;&nbsp;&nbsp;(1) They are confined to <strong>isolated scenarios</strong> with narrow action spaces (e.g., exclusively focusing on video browsing or e-commerce dialogue).<br>
             &nbsp;&nbsp;&nbsp;&nbsp;(2) Such narrow focus overlooks the <strong>holistic, interconnected nature</strong> of authentic human decision-making and preferences.<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;(3) They fail to assess whether LLMs can transcend fragmented data to model <strong>long-horizon causal structures</strong>.  <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(3) They fail to assess whether LLMs can transcend fragmented data to model <strong>long-horizon causal structures</strong>.  <br><br>
             &nbsp;&nbsp;&nbsp;&nbsp;To bridge this gap, we present <strong>OmniBehavior, the first user simulation benchmark</strong> built entirely on real-world data that simultaneously captures long-horizon, cross-scenario, and heterogeneous behavioral patterns. Collected from <a href="https://www.kuaishou.com" target="_blank">Kuaishou</a>, OmniBehavior aggregates complete interaction traces from representative users over a three-month period across 5 diverse scenarios.<br>
             &nbsp;&nbsp;&nbsp;&nbsp;Comprehensive evaluation of current state-of-the-art closed and open-source LLMs reveals substantial limitations. For instance, the best-performing LLM (Claude-4.5-Opus) achieves an overall score of only 44.55, and F1 scores on binary behavior prediction for most models do not exceed 40%. This proves that current LLMs struggle to accurately simulate complex, long-horizon user behavior traces. <br>
             &nbsp;&nbsp;&nbsp;&nbsp;Crucially, our study uncovers a fundamental structural bias in current LLM simulators: <strong>they converge toward a "positivity-and-average" representation</strong>. <strong>This Utopian bias and hyper-activity blur individual-specific differences</strong>, discarding long-tail behaviors and negative feedback signals. OmniBehavior provides a vital framework to guide the genuine modeling of real human diversity. <br>
@@ -190,7 +200,7 @@
       <div class="container">
         <div class="content has-text-centered">
           <h2 class="title is-3">Benchmark Scope</h2>
-          <p style="text-align: center; margin-left: auto; margin-top:1%;margin-right: auto; width: 80%;" >
+          <p style="text-align: left; margin-left: auto; margin-top:1%;margin-right: auto; width: 80%;" >
             We construct a unified simulation environment covering five major user activities on Kuaishou platform (including customer service dialogues within the E-commerce scenario). The framework requires the agent to predict diverse behaviors (e.g., watch duration, purchase, comment) based on scenario-specific contexts, serving as a comprehensive testbed for high-fidelity user simulation.
           </p>
           <div class="box m-5" >
