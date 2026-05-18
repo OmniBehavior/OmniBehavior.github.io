@@ -40,12 +40,50 @@
         pointer-events: none;
         background-image: none !important; /* Remove the sort arrow */
     }
+
+    .dataset-release-banner {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1.5rem 1.75rem;
+        border: 2px solid #ffb01f;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #fff7df 0%, #fff 45%, #eef8ff 100%);
+        box-shadow: 0 12px 30px rgba(255, 176, 31, 0.18);
+    }
+
+    .dataset-release-banner p {
+        margin-bottom: 0.75rem;
+        font-size: 1.15rem;
+        line-height: 1.55;
+    }
+
+    .dataset-release-banner p:last-child {
+        margin-bottom: 0;
+    }
+
+    .dataset-release-banner a {
+        color: #0757a5;
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .dataset-release-banner {
+            padding: 1.15rem 1rem;
+            margin: 0 0.75rem;
+        }
+
+        .dataset-release-banner p {
+            font-size: 1rem;
+        }
+    }
   </style>
 
 </head>
 <body>
   <section class="hero">
-    <div class="hero-body">
+    <div class="hero-body" style="padding-bottom: 1rem;">
       <div class="container" style="max-width: 1200px;">
         <div class="columns is-centered">
           <div class="column has-text-centered">
@@ -111,7 +149,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://github.com/icip-cas/OmniBehavior/tree/main/data"
+                  <a href="https://huggingface.co/datasets/jiawei-ucas/OmniBehavior"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <p style="font-size:18px">🤗</p>
@@ -135,6 +173,16 @@
       </div>
     </div>
   </section>
+
+<!-- Dataset Release Banner -->
+<section class="section" style="padding-top: 0.5rem; padding-bottom: 1.5rem;">
+  <div class="container">
+    <div class="dataset-release-banner">
+      <p><strong>[2026.05.18]</strong> 🚀 <strong>The full OmniBehavior dataset is now publicly available on HuggingFace, including complete raw user behavior traces, evaluation code, and synchronized releases of both Chinese and English versions.</strong></p>
+      <p>📥 Download here: <a href="https://huggingface.co/datasets/jiawei-ucas/OmniBehavior" target="_blank">OmniBehavior Dataset</a></p>
+    </div>
+  </div>
+</section>
 
 <!-- Introduction SECTION -->
 <section class="hero is-light is-small">
@@ -485,4 +533,3 @@
 
 </body>
 </html>
-
